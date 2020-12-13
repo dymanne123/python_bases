@@ -1,0 +1,14 @@
+def Prim_MST(graph,s):
+    nextcodes=nodes(graph)
+    parent={}
+    dist={}
+    dist[s]=0
+
+    while len(nextnodes)>0:
+        x=extract_min_dist(nextnodes,dist)
+        for y in neighbors(graph,x):
+            new_dist=distance(graph,x,y)
+            if (y in nextnodes) and (y not in dist or new_dist<dist[y]):
+                dist[y]=new_dist
+                parent[y]=x
+    return parent
